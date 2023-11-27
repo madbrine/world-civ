@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node index.js & go run ."
+    "start": "node index.js & go run ./server/main.go"
   },
   "repository": {
     "type": "git",
@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/madbrine/world-civ/issues"
   },
-  "homepage": "https://github.com/madbrine/world-civ#readme"
+  "homepage": "https://github.com/madbrine/world-civ#readme",
+  "dependencies": {
+    "three": "^0.158.0"
+  }
 }

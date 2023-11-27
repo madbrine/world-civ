@@ -1,9 +1,9 @@
 var http = require('http');
 var fs = require('fs');
 
-const PORT=8081; 
+const PORT=8082; 
 
-fs.readFile('./index.html', function (err, html) {
+fs.readFile('./client/index.html', function (err, html) {
 
     if (err) throw err;    
 
