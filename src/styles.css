@@ -1,6 +1,12 @@
-.red {
-    color: red;
+.container {
+    padding: 16px;
+    border-radius: 8px;
+    border: solid 1px #000;
 }
 .green {
     color: green;
+    background-color: aliceblue;
+    border-radius: 4px;
+    margin: 4px;
+    padding: 4px;
 }
