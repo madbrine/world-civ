@@ -1,6 +1,5 @@
 import './styles.css';
-import App from './app'
-
+import MainRouter from './ui/MainRouter'
 
 const root = document.getElementById('root');
-root.appendChild(App())
+root.appendChild(MainRouter())
