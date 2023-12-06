@@ -3,9 +3,7 @@ import div from './dom'
 function MainRouter() {
     return (
         div({ className: 'container'},[
-            div({ className: "green", text: 'green' }),
-            div({ className: "green", text: 'green' }),
-            Hex(),
+            Hex()
         ])
     )
 }

@@ -21,14 +21,7 @@ module.exports = {
         rules: [
             {
                 test: [/\.module.css$/, /\.css$/i,],
-                use: [
-                    'style-loader', 
-                    {
-                        loader: 'css-loader',
-                        options: {
-                            modules: true
-                        }
-                    }
+                use: ['style-loader', 'css-loader',
                 ]
             },
         ]

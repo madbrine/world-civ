@@ -1,36 +1,25 @@
+import domStyle from "./domStyle";
 
-function div({ className: className, text: text, style: style }, child) {
+function div({ className: className, text: text, style: style }, childs) {
     const el = document.createElement('div');
-    typeof className === "string"
-        ? el.classList.add(className)
-        : console.error(`[Error Type] ${className} is not a string`);
 
-    typeof text === "string" || typeof text === "number"
-        ? el.appendChild(document.createTextNode(text))
-        : console.error(`[Error Type] ${text} is not a string`);
+    if (className !== undefined) {
+            typeof className === "string"
+            ? el.classList.add(className)
+            : console.error(`[Error Type] className: ${className} is not a string`);
+    }
 
-    el.style.backgroundColor =
-        typeof style.backgroundColor === "string"
-        && style.backgroundColor
+    if (text !== undefined) {
+        typeof text === "string" || "number"
+            ? el.appendChild(document.createTextNode(text))
+            : console.error(`[Error Type] text with class "${className}": ${text} is not a string`);
+    }
 
-    el.style.height =
-        typeof style.height === "string"
-        && style.height
+    style &&
+        domStyle(el, style);
 
-    el.style.width =
-        typeof style.width === "string"
-        && style.width
-
-    el.style.borderColor =
-        typeof style.borderColor === "string"
-        && style.borderColor
-
-    el.style.borderWidth =
-        typeof style.borderWidth === "string"
-        && style.borderWidth
-
-        el.style.
-            child && child.map((chil) => el.appendChild(chil));
+    childs &&
+        childs.map((child) => el.appendChild(child));
 
     return el;
 }
